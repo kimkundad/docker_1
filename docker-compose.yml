@@ -1,4 +1,4 @@
-version: '3'
+version: '2'
 services:
   suaipisuai:
     image: nginx
@@ -11,11 +11,8 @@ services:
     environment:
       VIRTUAL_HOST: 'suaipisuai.com'
 
-  php:
-    build: .dockerconfig/php
-    volumes:
-      - .dockerconfig/php/conf.d:/user/local/etc/php/conf.d
-      - ./html:/var/www/html
-    expose:
-      - 9000
+  networks:
+  default:
+    external:
+      name: sandbox_network
 
