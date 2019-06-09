@@ -5,7 +5,7 @@ services:
     volumes:
       - .dockerconfig/nginx/conf.d:/etc/nginx/conf.d
       - .:/var/www/html
-    ports:
+    expose:
       - 80
 
   php:
