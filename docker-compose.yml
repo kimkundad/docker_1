@@ -7,7 +7,7 @@ services:
       - 80
     volumes:
       - ./suaipisuai:/var/www/html
-      - .dockerconfig/nginx/conf.d/nginx/suaipisuai.conf:/etc/nginx/nginx.conf
+      - .dockerconfig/nginx/conf.d/suaipisuai.conf:/etc/nginx/conf.d
     environment:
       VIRTUAL_HOST: 'suaipisuai.com'
 
