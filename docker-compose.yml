@@ -1,5 +1,16 @@
 version: '3.1'
 services:
+  suaipisuai:
+    image: nginx
+    container_name: suaipisuai
+    expose:
+      - 80
+    volumes:
+      - ./suaipisuai:/var/www/html
+      - .dockerconfig/nginx/conf.d/nginx/suaipisuai.conf:/etc/nginx/conf.d
+    environment:
+      VIRTUAL_HOST: 'suaipisuai.com'
+
   php:
     build: .dockerconfig/php
     volumes:
