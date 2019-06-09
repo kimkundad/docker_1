@@ -20,6 +20,6 @@ services:
       - 9000
 
   networks:
-  default:
-    external:
-      name: sandbox_network
+    default:
+      external:
+        name: sandbox_network
